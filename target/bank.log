@@ -1,0 +1,5 @@
+22/Feb/2022 21:18:40,355- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 21:18:40,370- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 21:18:40,371- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 21:18:45,352- CustomerJdbcDaoImpl: Entered viewAccount() in CustomerDAO
+22/Feb/2022 21:18:45,354- CustomerJdbcDaoImpl: Exited viewAccount() in CustomerDAO
