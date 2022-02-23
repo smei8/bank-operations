@@ -11,7 +11,7 @@ public interface CustomerService {
 	
 	boolean customerLogin(int userID, int userPin) throws SystemException;
 	
-	CustomerPojo viewAccount(int userID, int userPin) throws SystemException;
+	//CustomerPojo viewAccount(int userID, int userPin) throws SystemException;
 	
 	CustomerPojo fetchAAccount(int userID) throws SystemException;
 	

@@ -1,10 +1,13 @@
-22/Feb/2022 17:07:54,679- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,689- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,689- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,689- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,689- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,689- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,690- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,690- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,690- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,690- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
+22/Feb/2022 22:32:12,456- CustomerJdbcDaoImpl: Entered fetchAAccount() in CustomerDAO
+22/Feb/2022 22:32:12,461- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
+22/Feb/2022 22:33:02,740- EmpJdbcDaoImpl: Entered epLogin() in EmployeeDAO
+22/Feb/2022 22:33:02,741- EmpJdbcDaoImpl: Exited epLogin() in EmployeeDAO
+22/Feb/2022 22:33:02,742- EmpJdbcDaoImpl: Entered epLogin() in EmployeeDAO
+22/Feb/2022 22:33:02,742- EmpJdbcDaoImpl: Exited epLogin() in EmployeeDAO
+22/Feb/2022 22:34:13,756- EmpJdbcDaoImpl: Entered registerCustomer() in EmployeeDAO
+22/Feb/2022 22:34:13,758- EmpJdbcDaoImpl: Exited registerCustomer() in EmployeeDAO
+22/Feb/2022 22:34:16,254- EmpJdbcDaoImpl: Entered epLogin() in EmployeeDAO
+22/Feb/2022 22:34:16,255- EmpJdbcDaoImpl: Exited epLogin() in EmployeeDAO
+22/Feb/2022 22:34:16,949- EmpJdbcDaoImpl: Entered fetchAllAcounts() in EmployeeDAO
+22/Feb/2022 22:34:16,950- EmpJdbcDaoImpl: Exited fetchAllAcounts() in EmployeeDAO
+22/Feb/2022 22:34:53,248- CustomerJdbcDaoImpl: Entered fetchAAccount() in CustomerDAO

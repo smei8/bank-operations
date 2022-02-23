@@ -7,6 +7,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import exception.AccountNotFoundException;
 import exception.SystemException;
 import pojo.CustomerPojo;
 import pojo.EmployeePojo;
@@ -46,7 +47,7 @@ public class BankMain {
 
 			switch (option) {
 			case 1:
-				// employee login
+				// employee logi
 				System.out.println("Employee ID: ");
 				int epID = scan.nextInt();
 				System.out.println("Password: ");
@@ -57,7 +58,7 @@ public class BankMain {
 				try {
 					while (employeeService.epLogin(epID, epPassword) == false) {
 						System.out.println("Employee ID or Password does not match our records!");
-						System.out.println("Please try again!");
+						System.out.println("Please try again!\n");
 						System.out.println("Employee ID: ");
 						epID = scan.nextInt();
 						System.out.println("Password: ");
@@ -78,7 +79,7 @@ public class BankMain {
 							System.out.println("--------------------------------------------------------------------");
 							System.out.println("1. Register new customer account");
 							System.out.println("2. View all account information");
-							System.out.println("3. Logout");
+							//System.out.println("3. Logout");
 							System.out.println("--------------------------------------------------------------------");
 							System.out.println("Please select an option:");
 
@@ -106,28 +107,34 @@ public class BankMain {
 								CustomerPojo addedCustomer;
 
 								addedCustomer = employeeService.registerCustomer(newCustomer);
-								System.out.println("Account successfully created!");
+								System.out.println("Account successfully created!\n");
 								break;
 
 							case 2: // fetch all account information
 								List<CustomerPojo> allCustomers;
 
-								allCustomers = employeeService.fetchAllAccounts();
-								Iterator<CustomerPojo> itr = allCustomers.iterator();
-								// System.out.println("this is all customer from main! " + allCustomers);
-								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
-								System.out.printf("%20s %20s %20s %20s %20s %20s\n",
-										"User ID", "Account Number", "Customer Name", "Account Balance", "Customer Contact", "Customer Address");
-								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
-								while (itr.hasNext()) {
-									CustomerPojo customer = itr.next();
-									System.out.format("%20s %20s %20s %20s %20s %20s\n",
-											customer.getUserID(), customer.getAccNumber(), customer.getAccName(), customer.getAccBalance(),
-											customer.getCustomerContact(), customer.getCustomerAddress());
-								}
-								// System.out.println("this is all customer from main! " + allCustomers);
+								try {
+									allCustomers = employeeService.fetchAllAccounts();
+									Iterator<CustomerPojo> itr = allCustomers.iterator();
+									// System.out.println("this is all customer from main! " + allCustomers);
+									System.out.println(
+											"-----------------------------------------------------------------------------------------------------------------------");
+									System.out.printf("%20s %20s %20s %20s %20s %20s\n",
+											"User ID", "Account Number", "Customer Name", "Account Balance", "Customer Contact", "Customer Address");
+									System.out.println(
+											"-----------------------------------------------------------------------------------------------------------------------");
+									while (itr.hasNext()) {
+										CustomerPojo customer = itr.next();
+										System.out.format("%20s %20s %20s %20s %20s %20s\n",
+												customer.getUserID(), customer.getAccNumber(), customer.getAccName(), customer.getAccBalance(),
+												customer.getCustomerContact(), customer.getCustomerAddress());
+									}
+									// System.out.println("this is all customer from main! " + allCustomers);
+								} catch (SystemException e) {
+									LOG.error(e);
+									System.out.println(e.getMessage());
+								} 
+								
 								break;
 //								
 //							case 3:	//logout
@@ -178,7 +185,7 @@ public class BankMain {
 				try {
 					while (customerService.customerLogin(userID, userPin) == false) {
 						System.out.println("User ID or Pin does not match our records");
-						System.out.println("Please try again!");
+						System.out.println("Please try again!\n");
 						System.out.println("User ID: ");
 						userID = scan.nextInt();
 						System.out.println("Password: ");
@@ -195,7 +202,7 @@ public class BankMain {
 					// entering the customer menu after logging in
 					try {
 						if (customerService.customerLogin(userID, userPin) == true) {
-							System.out.println("Hello, " + customerLogin.getAccName());
+							System.out.println("\n Hello, " + customerLogin.getAccName());
 							System.out.println("-------------------------------------------------------------------------------");
 							System.out.println("Customer Menu");
 							System.out.println("-------------------------------------------------------------------------------");
@@ -215,15 +222,26 @@ public class BankMain {
 
 								System.out.println("Enter your pin number: ");
 								int pin = scan.nextInt();
-								customer = customerService.viewAccount(userID, pin);
+								
+								while (customerService.customerLogin(userID, pin) == false) {
+									System.out.println("Your Pin does not match our records");
+									System.out.println("Please try again!\n");
 
-								System.out.println("User ID: " + customer.getUserID());
-								System.out.println("Account Number: " + customer.getAccNumber());
-								System.out.println("Account Name: " + customer.getAccName());
-								System.out.println("Account Balance: " + customer.getAccBalance());
-								System.out.println("Contact Number: " + customer.getCustomerContact());
-								System.out.println("Address: " + customer.getCustomerAddress());
+									System.out.println("Password: ");
+									pin = scan.nextInt();
+								}
+								
+								if(customerService.customerLogin(userID, pin) == true) {
+									customer = customerService.fetchAAccount(userID);
 
+									System.out.println("User ID: " + customer.getUserID());
+									System.out.println("Account Number: " + customer.getAccNumber());
+									System.out.println("Account Name: " + customer.getAccName());
+									System.out.println("Account Balance: " + customer.getAccBalance());
+									System.out.println("Contact Number: " + customer.getCustomerContact());
+									System.out.println("Address: " + customer.getCustomerAddress());
+								}
+														
 								break;
 
 							case 2: // transfer money
@@ -241,7 +259,7 @@ public class BankMain {
 								customerService.moneyTransfer(fromAccNum, toAccNum, amount);
 								System.out.println("Money Transfered Successfully!");
 								double updatedBalance = moneyTransfer.getAccBalance() - amount;
-								System.out.println("You new balance is " + updatedBalance);
+								System.out.println("You new balance is " + updatedBalance + "\n");
 								
 								break;
 							case 3: // view transaction history
@@ -254,11 +272,11 @@ public class BankMain {
 								Iterator<TransactionPojo> itr = allTransaction.iterator();
 								
 								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
+										"-----------------------------------------------------------------------------------------------------------------------");
 								System.out.printf("%20s %20s %20s %20s %20s %20s\n",
 										"Transaction ID", "Account", "Transfered To", "Balance", "Transfered Amount", "Transfer Date");
 								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
+										"-----------------------------------------------------------------------------------------------------------------------");
 								while (itr.hasNext()) {
 									TransactionPojo transaction = itr.next();
 									System.out.format("%20s %20s %20s %20s %20s %20s\n",

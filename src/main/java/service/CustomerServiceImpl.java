@@ -21,10 +21,10 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerDao.customerLogin(userID, userPin);
 	}
 
-	@Override
-	public CustomerPojo viewAccount(int userID, int userPin) throws SystemException {
-		return customerDao.viewAccount(userID, userPin);
-	}
+//	@Override
+//	public CustomerPojo viewAccount(int userID, int userPin) throws SystemException {
+//		return customerDao.viewAccount(userID, userPin);
+//	}
 
 	@Override
 	public TransactionPojo moneyTransfer(int fromAccNum, int toAccNum, int balance) throws SystemException {

@@ -1,10 +1,12 @@
-22/Feb/2022 17:07:54,690- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,700- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,700- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,700- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,700- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,701- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,701- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,701- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
-22/Feb/2022 17:07:54,701- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 17:07:54,702- BankMain: exception.LoginException: The User ID or Password you entered does not match our records!
+22/Feb/2022 22:34:53,249- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
+22/Feb/2022 22:34:53,255- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:34:53,256- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:34:53,256- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:34:53,257- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:35:20,207- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:35:20,208- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:35:20,208- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:35:20,209- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:35:20,216- CustomerJdbcDaoImpl: Entered fetchAAccount() in CustomerDAO
+22/Feb/2022 22:35:20,218- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
+22/Feb/2022 22:35:23,380- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
