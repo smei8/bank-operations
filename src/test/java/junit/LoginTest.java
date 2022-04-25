@@ -14,33 +14,23 @@ import service.EmployeeServiceImpl;
 public class LoginTest {
 
 	@Test
-	public void testCustomerLogin() {
+	public void testCustomerLogin() throws SystemException {
 		CustomerService customerService = new CustomerServiceImpl();
-		boolean actualResult = false;
 		
-		try {
-			actualResult = customerService.customerLogin(11, 8021);
-		} catch (SystemException e) {
-			e.printStackTrace();
-		}
-		
+		boolean actualResult = customerService.customerLogin(11, 8021);
 		boolean expectedResult = true;
+		
 		//assertTrue(actualResult);
 		assertEquals(expectedResult, actualResult);
 	}
 	
 	@Test
-	public void testEmployeeLogin() {
+	public void testEmployeeLogin() throws SystemException {
 		EmployeeService employeeService = new EmployeeServiceImpl();
-		boolean actualResult = false;
 		
-		try {
-			actualResult = employeeService.epLogin(1, 1234);
-		} catch (SystemException e) {
-			e.printStackTrace();
-		}
-		
+		boolean actualResult = employeeService.epLogin(1, 1234);
 		boolean expectedResult = true;
+		
 		//assertTrue(actualResult);
 		assertEquals(expectedResult, actualResult);	
 	}
