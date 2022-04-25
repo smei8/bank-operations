@@ -1,5 +1,6 @@
 package junit;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -18,13 +19,14 @@ public class LoginTest {
 		boolean actualResult = false;
 		
 		try {
-			actualResult = customerService.customerLogin(5, 1425);
+			actualResult = customerService.customerLogin(11, 8021);
 		} catch (SystemException e) {
 			e.printStackTrace();
 		}
 		
 		boolean expectedResult = true;
-		assertTrue(actualResult);
+		//assertTrue(actualResult);
+		assertEquals(expectedResult, actualResult);
 	}
 	
 	@Test
@@ -39,6 +41,7 @@ public class LoginTest {
 		}
 		
 		boolean expectedResult = true;
-		assertTrue(actualResult);
+		//assertTrue(actualResult);
+		assertEquals(expectedResult, actualResult);	
 	}
 }
