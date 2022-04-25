@@ -13,7 +13,7 @@ import service.EmployeeServiceImpl;
 public class LoginTest {
 
 	@Test
-	public void customerLogin() {
+	public void testCustomerLogin() {
 		CustomerService customerService = new CustomerServiceImpl();
 		boolean actualResult = false;
 		
@@ -28,7 +28,7 @@ public class LoginTest {
 	}
 	
 	@Test
-	public void employeeLogin() {
+	public void testEmployeeLogin() {
 		EmployeeService employeeService = new EmployeeServiceImpl();
 		boolean actualResult = false;
 		

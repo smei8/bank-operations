@@ -53,38 +53,38 @@ public class CustomerJdbcDaoImpl implements CustomerDao {
 		return login;
 	}
 
-	@Override
-	public CustomerPojo viewAccount(int userID, int userPin) throws SystemException {
-		LOG.info("Entered viewAccount() in CustomerDAO");
-
-		CustomerPojo customerPojo = null;
-		Connection conn = DBUtil.obtainConnection();
-		int password = 0;
-		
-		try {
-			Statement stmt = conn.createStatement();
-			String query = "SELECT * FROM customer_details WHERE user_id=" + userID;
-			ResultSet rs = stmt.executeQuery(query);
-			
-			if(rs.next()) {
-				password = rs.getInt(2);
-				if (password == userPin) {
-					customerPojo = new CustomerPojo();
-					customerPojo.setUserID(rs.getInt(1));
-					customerPojo.setAccNumber(rs.getInt(3));
-					customerPojo.setAccName(rs.getString(4));
-					customerPojo.setAccBalance(rs.getInt(5));
-					customerPojo.setCustomerContact(rs.getInt(6));
-					customerPojo.setCustomerAddress(rs.getString(7));
-				}
-			}
-		} catch (SQLException e) {
-			throw new SystemException();
-		}
-		
-		LOG.info("Exited viewAccount() in CustomerDAO");
-		return customerPojo;
-	}
+//	@Override
+//	public CustomerPojo viewAccount(int userID, int userPin) throws SystemException {
+//		LOG.info("Entered viewAccount() in CustomerDAO");
+//
+//		CustomerPojo customerPojo = null;
+//		Connection conn = DBUtil.obtainConnection();
+//		int password = 0;
+//		
+//		try {
+//			Statement stmt = conn.createStatement();
+//			String query = "SELECT * FROM customer_details WHERE user_id=" + userID;
+//			ResultSet rs = stmt.executeQuery(query);
+//			
+//			if(rs.next()) {
+//				password = rs.getInt(2);
+//				if (password == userPin) {
+//					customerPojo = new CustomerPojo();
+//					customerPojo.setUserID(rs.getInt(1));
+//					customerPojo.setAccNumber(rs.getInt(3));
+//					customerPojo.setAccName(rs.getString(4));
+//					customerPojo.setAccBalance(rs.getInt(5));
+//					customerPojo.setCustomerContact(rs.getInt(6));
+//					customerPojo.setCustomerAddress(rs.getString(7));
+//				}
+//			}
+//		} catch (SQLException e) {
+//			throw new SystemException();
+//		}
+//		
+//		LOG.info("Exited viewAccount() in CustomerDAO");
+//		return customerPojo;
+//	}
 
 	@Override
 	public TransactionPojo moneyTransfer(int fromAccNum, int toAccNum, int balance) throws SystemException {

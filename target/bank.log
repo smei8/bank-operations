@@ -1,5 +1,5 @@
-22/Feb/2022 21:18:40,355- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
-22/Feb/2022 21:18:40,370- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
-22/Feb/2022 21:18:40,371- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
-22/Feb/2022 21:18:45,352- CustomerJdbcDaoImpl: Entered viewAccount() in CustomerDAO
-22/Feb/2022 21:18:45,354- CustomerJdbcDaoImpl: Exited viewAccount() in CustomerDAO
+22/Feb/2022 22:06:56,784- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:06:57,638- CustomerJdbcDaoImpl: Entered fetchAAccount() in CustomerDAO
+22/Feb/2022 22:06:57,639- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
+22/Feb/2022 22:06:57,640- CustomerJdbcDaoImpl: Entered viewTransactionHist() in CustomerDAO
+22/Feb/2022 22:06:57,643- CustomerJdbcDaoImpl: Exited viewTransactionHist() in CustomerDAO

@@ -2,7 +2,6 @@ package dao;
 
 import java.util.List;
 
-import exception.LoginException;
 import exception.SystemException;
 import pojo.CustomerPojo;
 import pojo.TransactionPojo;
@@ -11,7 +10,7 @@ public interface CustomerDao {
 	
 	boolean customerLogin(int userID, int userPin) throws SystemException;
 	
-	CustomerPojo viewAccount(int userID, int userPin) throws SystemException;
+	//CustomerPojo viewAccount(int userID, int userPin) throws SystemException;
 	
 	CustomerPojo fetchAAccount(int userID) throws SystemException;
 	
