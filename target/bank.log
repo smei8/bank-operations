@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 22/Feb/2022 22:06:56,784- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
 22/Feb/2022 22:06:57,638- CustomerJdbcDaoImpl: Entered fetchAAccount() in CustomerDAO
 22/Feb/2022 22:06:57,639- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
 22/Feb/2022 22:06:57,640- CustomerJdbcDaoImpl: Entered viewTransactionHist() in CustomerDAO
 22/Feb/2022 22:06:57,643- CustomerJdbcDaoImpl: Exited viewTransactionHist() in CustomerDAO
+=======
+22/Feb/2022 22:36:14,644- CustomerJdbcDaoImpl: Exited fetchAAccount() in CustomerDAO
+22/Feb/2022 22:36:14,657- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:36:14,658- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+22/Feb/2022 22:36:14,658- CustomerJdbcDaoImpl: Entered customerLogin() in CustomerDAO
+22/Feb/2022 22:36:14,659- CustomerJdbcDaoImpl: Exited customerLogin() in CustomerDAO
+>>>>>>> 08dc2f2602d14139208b67b8b4d80e6580bc89f1

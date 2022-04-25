@@ -118,11 +118,19 @@ public class BankMain {
 									Iterator<CustomerPojo> itr = allCustomers.iterator();
 									// System.out.println("this is all customer from main! " + allCustomers);
 									System.out.println(
+<<<<<<< HEAD
 											"--------------------------------------------------------------------------------------------------------------");
 									System.out.printf("%20s %20s %20s %20s %20s %20s\n",
 											"User ID", "Account Number", "Customer Name", "Account Balance", "Customer Contact", "Customer Address");
 									System.out.println(
 											"--------------------------------------------------------------------------------------------------------------");
+=======
+											"-----------------------------------------------------------------------------------------------------------------------");
+									System.out.printf("%20s %20s %20s %20s %20s %20s\n",
+											"User ID", "Account Number", "Customer Name", "Account Balance", "Customer Contact", "Customer Address");
+									System.out.println(
+											"-----------------------------------------------------------------------------------------------------------------------");
+>>>>>>> 08dc2f2602d14139208b67b8b4d80e6580bc89f1
 									while (itr.hasNext()) {
 										CustomerPojo customer = itr.next();
 										System.out.format("%20s %20s %20s %20s %20s %20s\n",
@@ -202,7 +210,7 @@ public class BankMain {
 					// entering the customer menu after logging in
 					try {
 						if (customerService.customerLogin(userID, userPin) == true) {
-							System.out.println("Hello, " + customerLogin.getAccName());
+							System.out.println("\n Hello, " + customerLogin.getAccName());
 							System.out.println("-------------------------------------------------------------------------------");
 							System.out.println("Customer Menu");
 							System.out.println("-------------------------------------------------------------------------------");
@@ -272,11 +280,11 @@ public class BankMain {
 								Iterator<TransactionPojo> itr = allTransaction.iterator();
 								
 								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
+										"-----------------------------------------------------------------------------------------------------------------------");
 								System.out.printf("%20s %20s %20s %20s %20s %20s\n",
 										"Transaction ID", "Account", "Transfered To", "Balance", "Transfered Amount", "Transfer Date");
 								System.out.println(
-										"--------------------------------------------------------------------------------------------------------------");
+										"-----------------------------------------------------------------------------------------------------------------------");
 								while (itr.hasNext()) {
 									TransactionPojo transaction = itr.next();
 									System.out.format("%20s %20s %20s %20s %20s %20s\n",
