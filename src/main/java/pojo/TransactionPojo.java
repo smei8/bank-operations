@@ -7,12 +7,11 @@ public class TransactionPojo {
 	private int fromAccNum;
 	private int toAccNum;
 	private int transferAmount;
-	private int accBalance;
+	private int newBalance;
 	private String transferDate;
 	
 	public TransactionPojo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public TransactionPojo(int transactionId, int fromAccNum, int toAccNum, int transferAmount, String transferDate) {
@@ -25,15 +24,24 @@ public class TransactionPojo {
 	}
 
 	
-	public TransactionPojo(int transactionId, String accName, int fromAccNum, int toAccNum, int transferAmount,
-			int accBalance, String transferDate) {
+	public TransactionPojo(int fromAccNum, int toAccNum, int transferAmount, String transferDate) {
 		super();
-		this.transactionId = transactionId;
-		this.accName = accName;
 		this.fromAccNum = fromAccNum;
 		this.toAccNum = toAccNum;
 		this.transferAmount = transferAmount;
-		this.accBalance = accBalance;
+		this.transferDate = transferDate;
+	}
+
+
+	public TransactionPojo(int transactionId, int fromAccNum, int toAccNum, int transferAmount, int newBalance,
+			String accName, String transferDate) {
+		super();
+		this.transactionId = transactionId;
+		this.fromAccNum = fromAccNum;
+		this.toAccNum = toAccNum;
+		this.transferAmount = transferAmount;
+		this.newBalance = newBalance;
+		this.accName = accName;
 		this.transferDate = transferDate;
 	}
 
@@ -77,12 +85,12 @@ public class TransactionPojo {
 		this.transferAmount = transferAmount;
 	}
 
-	public int getAccBalance() {
-		return accBalance;
+	public int getNewBalance() {
+		return newBalance;
 	}
 
-	public void setAccBalance(int accBalance) {
-		this.accBalance = accBalance;
+	public void setNewBalance(int newBalance) {
+		this.newBalance = newBalance;
 	}
 
 	public String getTransferDate() {
@@ -95,9 +103,8 @@ public class TransactionPojo {
 
 	@Override
 	public String toString() {
-		return "TransactionPojo [transactionId=" + transactionId + ", accName=" + accName + ", fromAccNum=" + fromAccNum
-				+ ", toAccNum=" + toAccNum + ", transferAmount=" + transferAmount + ", accBalance=" + accBalance
-				+ ", transferDate=" + transferDate + "]";
+		return "TransactionPojo [transactionId=" + transactionId + ", fromAccNum=" + fromAccNum + ", toAccNum="
+				+ toAccNum + ", transferAmount=" + transferAmount + ", newBalance=" + newBalance + ", accName="
+				+ accName + ", transferDate=" + transferDate + "]";
 	}
-	
 }
