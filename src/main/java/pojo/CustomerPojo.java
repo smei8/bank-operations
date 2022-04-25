@@ -12,12 +12,22 @@ public class CustomerPojo {
 	
 	public CustomerPojo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public CustomerPojo(int userPin, String accName, double accBalance, int customerContact, String customerAddress) {
 		super();
 		this.userPin = userPin;
+		this.accName = accName;
+		this.accBalance = accBalance;
+		this.customerContact = customerContact;
+		this.customerAddress = customerAddress;
+	}
+	
+	public CustomerPojo(int userID, int accNumber, String accName, double accBalance, int customerContact,
+			String customerAddress) {
+		super();
+		this.userID = userID;
+		this.accNumber = accNumber;
 		this.accName = accName;
 		this.accBalance = accBalance;
 		this.customerContact = customerContact;
@@ -98,6 +108,4 @@ public class CustomerPojo {
 				+ ", accBalance=" + accBalance + ", customerContact=" + customerContact + ", customerAddress="
 				+ customerAddress + "]";
 	}
-	
-
 }

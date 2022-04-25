@@ -4,21 +4,25 @@ public class EmployeePojo {
 	
 	private int epID;
 	private int epPassword;
-	
-	//used to create employee account
 	private String epName; 
 	private int epContact;
 	private String epAddess;
 	
 	public EmployeePojo() {
 		super();
-		// TODO Auto-generated constructor stub
+	}
+
+	public EmployeePojo(int epID, String epName, int epContact, String epAddess) {
+		super();
+		this.epID = epID;
+		this.epName = epName;
+		this.epContact = epContact;
+		this.epAddess = epAddess;
 	}
 
 	public EmployeePojo(int epID, int epPassword, String epName, int epContact, String epAddess) {
 		super();
 		this.epID = epID;
-		
 		this.epName = epName;
 		this.epPassword = epPassword;
 		this.epContact = epContact;
@@ -67,7 +71,4 @@ public class EmployeePojo {
 		return "EmployeePojo [epID=" + epID + ", epName=" + epName + ", epContact="
 				+ epContact + ", epAddess=" + epAddess + "]";
 	}
-
-
-	
 }
